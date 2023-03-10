@@ -1,0 +1,23 @@
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app">
+  <input type="text" v-on:input="updateMessage">
+  <p>{{ message }}</p>
+</div>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Usando VueJs 2!'
+    },
+    methods: {
+      updateMessage: function(e) {
+        this.message = e.target.value
+      }
+    }
+  })
+
+
+</script>
+  
