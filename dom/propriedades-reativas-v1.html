@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app">
+  <p>{{ title }}</p>
+  <!-- <input type="text" v-bind:value="title"
+  v-on:input="title = $event.target.value"> -->
+    <input type="text" v-model="title">
+</div>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      title: 'Usando VueJs!'
+    }
+  })
+
+
+</script>
+  
