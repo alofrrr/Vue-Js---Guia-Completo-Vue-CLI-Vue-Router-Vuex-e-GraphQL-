@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app1">
+    {{titulo1}} - {{ titulo2}}
+    <button v-on:click="alterarTitulo">Alterar</button>
+
+</div>
+
+<div id="app2">
+    {{titulo1}} - {{ titulo2}}
+    <button v-on:click="alterarTitulo">Alterar</button>
+</div>
+
+<script>
+    var app1 = new Vue({
+        el: '#app1',
+        data: {
+            titulo1: 'Instancia Vue 1',
+            titulo2: 'Instancia Vue 2'
+        }, 
+        methods: {
+           alterarTitulo: function() {
+               this.titulo1 += '!!!';
+           }
+        }
+    });
+
+    var app2 = new Vue({
+        el: '#app2',
+        data: {
+            titulo1: 'Instancia Vue 1',
+            titulo2: 'Instancia Vue 2'
+        },
+        methods: {
+           alterarTitulo: function() {
+               this.titulo2 += '!!!';
+           }
+        }
+    });
+</script>
